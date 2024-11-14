@@ -1,4 +1,4 @@
-package com.muhammadagisnayudiansyah.intentapputs
+package com.muhammadagisnayudiansyah.intentapp
 
 import android.os.Bundle
 import android.widget.TextView
