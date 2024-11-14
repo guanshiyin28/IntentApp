@@ -1,4 +1,4 @@
-package com.example.intentapp
+package com.muhammadagisnayudiansyah.intentapp
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.muhammadagisnayudiansyah.intentapp.MoveActivityWithData
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +20,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val btnMoveActivitywithData: Button = findViewById(R.id.btn_move_activity_data)
         btnMoveActivitywithData.setOnClickListener(this)
+
+        val btnMoveActivitywithObject: Button = findViewById(R.id.btn_move_activity_object)
+        btnMoveActivitywithObject.setOnClickListener(this)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -45,6 +47,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     moveIntentWithData.putExtra(MoveActivityWithData.YOUR_NUMBER,"081381319442")
                     startActivity(moveIntentWithData)
             }
+
+            R.id.btn_move_activity_object -> {
+                val objectmhs = Mahasiswa (
+                    "Muhammad Agisna Yudiansyah",
+                    "TI.23.B.2",
+                    19,
+                    "muhammadagisnayudiansyah@mhs.pelitabangsa.ac.id",
+                    "Lebak"
+                )
+                val movewithObject = Intent(this, MoveActivityWithObject::class.java)
+                movewithObject.putExtra(MoveActivityWithObject.EXTRA_MAHASISWA,objectmhs)
+                startActivity(movewithObject)
+            }
+
+
         }
     }
 }

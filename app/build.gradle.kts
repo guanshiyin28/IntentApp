@@ -1,16 +1,17 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
-    namespace = "com.example.intentapp"
-    compileSdk = 34
+    namespace = "com.muhammadagisnayudiansyah.intentapp"
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.muhammadagisnayudiansyah.intentapp"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "2.0"
 

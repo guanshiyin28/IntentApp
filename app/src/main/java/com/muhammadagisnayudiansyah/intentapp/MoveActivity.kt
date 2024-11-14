@@ -1,4 +1,4 @@
-package com.example.intentapp
+package com.muhammadagisnayudiansyah.intentapp
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
